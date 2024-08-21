@@ -3,6 +3,11 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserClothesController;
+use App\Http\Controllers\UploadController;
+
+
+Route::get('/postc', [UserClothesController::class, 'index'])->name('postc');
 
 /*
 |--------------------------------------------------------------------------
@@ -54,6 +59,12 @@ Route::middleware('auth')->group(function () {
     
     
     Route::get('/myposts', [PostController::class, 'myPosts'])->name('myposts');
+    Route::get('/clothes', [PostController::class, 'clothes'])->name('clothes');
+    Route::get('/decision', [PostController::class, 'decision']) ->name('decision');
+    Route::get('/test', [PostController::class, 'test']) ->name('test');
+
+    Route::post('/upload', [UploadController::class, 'upload'])->name('upload.submit');
+    Route::post('/decision', [PostController::class, 'handleDecision'])->name('decision');
 
 
     Route::get('/background', [PostController::class, 'background'])->name('background');
