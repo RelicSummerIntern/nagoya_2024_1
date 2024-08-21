@@ -39,6 +39,13 @@ Route::middleware('auth')->group(function () {
     Route::patch('/post/{id}', [PostController::class, 'update'])->name('post.update');
     Route::delete('/post/{id}', [PostController::class, 'destroy'])->name('post.destroy');
 
+
+    Route::get('/post/title', [PostController::class, 'title'])->name('post.title');
+    Route::get('/post/select', [PostController::class, 'select'])->name('post.select');
+    Route::get('/post/recommend', [PostController::class, 'recommend'])->name('post.recommend');
+    Route::get('/post/decision', [PostController::class, 'decision'])->name('post.decision');
+    
+    
     Route::get('/myposts', [PostController::class, 'myPosts'])->name('myposts');
 
 
