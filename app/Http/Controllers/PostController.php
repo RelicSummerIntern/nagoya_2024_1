@@ -82,5 +82,15 @@ class PostController extends Controller
 
         return redirect()->route('myposts')->with('success', '投稿が削除されました');
     }
+
+
+
+
+
+    public function background()
+    {
+        $posts = Post::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->get();
+        return view('background', compact('posts'));
+    }
 }
 

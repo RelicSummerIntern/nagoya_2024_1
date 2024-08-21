@@ -13,7 +13,9 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider and all of them will
 | be assigned to the "web" middleware group. Make something great!
 |
+
 */
+
 
 Route::get('/', function () {
     return view('home');
@@ -24,16 +26,19 @@ Route::get('/home', function () {
 })->name('home');
 //
 
+
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
+
     Route::get('/post/title', [PostController::class, 'title'])->name('post.title');
     Route::get('/post/select', [PostController::class, 'select'])->name('post.select');
     Route::get('/post/recommend', [PostController::class, 'recommend'])->name('post.recommend');
     Route::get('/post/decision', [PostController::class, 'decision'])->name('post.decision');
-    
+
     Route::get('/post/index', [PostController::class, 'index'])->name('post.index');
     Route::get('/post/create', [PostController::class, 'create'])->name('post.create');
     Route::post('/post/store', [PostController::class, 'store'])->name('post.store');
@@ -41,7 +46,18 @@ Route::middleware('auth')->group(function () {
     Route::patch('/post/{id}', [PostController::class, 'update'])->name('post.update');
     Route::delete('/post/{id}', [PostController::class, 'destroy'])->name('post.destroy');
 
+
+    Route::get('/post/title', [PostController::class, 'title'])->name('post.title');
+    Route::get('/post/select', [PostController::class, 'select'])->name('post.select');
+    Route::get('/post/recommend', [PostController::class, 'recommend'])->name('post.recommend');
+    Route::get('/post/decision', [PostController::class, 'decision'])->name('post.decision');
+    
+    
     Route::get('/myposts', [PostController::class, 'myPosts'])->name('myposts');
+
+
+    Route::get('/background', [PostController::class, 'background'])->name('background');
+
 });
 
 require __DIR__.'/auth.php';
