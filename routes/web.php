@@ -3,17 +3,10 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserClothesController;
+use App\Http\Controllers\UploadController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+Route::get('/postc', [UserClothesController::class, 'index'])->name('postc');
 
 Route::get('/', function () {
     return view('home');
@@ -37,6 +30,13 @@ Route::middleware('auth')->group(function () {
     Route::delete('/post/{id}', [PostController::class, 'destroy'])->name('post.destroy');
 
     Route::get('/myposts', [PostController::class, 'myPosts'])->name('myposts');
+    Route::get('/clothes', [PostController::class, 'clothes'])->name('clothes');
+    Route::get('/decision', [PostController::class, 'decision']) ->name('decision');
+    Route::get('/test', [PostController::class, 'test']) ->name('test');
+
+    Route::post('/upload', [UploadController::class, 'upload'])->name('upload.submit');
+    Route::post('/decision', [PostController::class, 'handleDecision'])->name('decision');
+
 });
 
 require __DIR__.'/auth.php';

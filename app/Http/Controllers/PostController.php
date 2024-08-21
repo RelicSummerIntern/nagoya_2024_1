@@ -8,6 +8,17 @@ use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
+    public function handleDecision(Request $request)
+    {
+        $selectedClothesId = $request->input('selected_clothes');
+        
+        // $selectedClothesIdを使って処理を行います
+        // 例えば、データベースに保存したり、ビューに渡したりします
+
+        // 選択されたアイテムのIDを使って、次のページにリダイレクトすることもできます
+        return view('clothes', compact('selectedClothesId'));
+    }
+
     public function index()
     {
         $posts = Post::orderBy('updated_at', 'desc')->get();
@@ -40,6 +51,23 @@ class PostController extends Controller
         $posts = Post::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->get();
         return view('my-posts', compact('posts'));
     }
+
+    public function test()
+    {
+        return view('test2');
+    }
+
+    public function clothes()
+    {
+        $posts = Post::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->get();
+        return view('clothes', compact('posts'));
+    }
+
+    // public function decision(Request $request)
+    // {
+    //     $option = $request->input('option');
+    //     return view('clothes');
+    // }
 
     public function edit($id)
     {
