@@ -24,7 +24,7 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('home');
 })->name('home');
-
+//
 
 
 
@@ -32,6 +32,13 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+
+    Route::get('/post/title', [PostController::class, 'title'])->name('post.title');
+    Route::get('/post/select', [PostController::class, 'select'])->name('post.select');
+    Route::get('/post/recommend', [PostController::class, 'recommend'])->name('post.recommend');
+    Route::get('/post/decision', [PostController::class, 'decision'])->name('post.decision');
+
     Route::get('/post/index', [PostController::class, 'index'])->name('post.index');
     Route::get('/post/create', [PostController::class, 'create'])->name('post.create');
     Route::post('/post/store', [PostController::class, 'store'])->name('post.store');
