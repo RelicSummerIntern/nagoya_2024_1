@@ -5,36 +5,51 @@
         </h2>
     </x-slot>
 
-    <div class="max-w-7xl mx-auto mt-10 px-4 sm:px-6 lg:px-8">
-        <div class="my-4">
-            <a href="{{ route('post.create') }}" class="inline-block py-2 px-4 btn btn-primary text-decoration-none">
-                {{ __('投稿する') }}
-            </a>
-
-            <a href="{{ route('myposts') }}" class="inline-block ml-4 py-2 px-4 btn btn-secondary text-decoration-none">
-                {{ __('自分の投稿を確認する') }}
-            </a>
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                
+                    この服には...
+                
+            </div>
         </div>
 
-        <div class="my-4">
-            @if (!empty($posts))
-                <ul>
-                    @foreach ($posts as $post)
-                        <li class="mb-6 bg-white border rounded-lg p-4">
-                            <h3 class="text-lg font-bold mb-2 border-bottom">{{ $post->title }}</h3>
-                            <p class="text-gray-1000 mt-4">{{ $post->body }}</p>
-                            <div class="flex justify-between mt-8">
-                                <p class="text-gray-600">{{ $post->user->name }}</p>
-                                <p class="text-gray-600">{{ $post->updated_at }}</p>
-                            </div>
-                        </li>
-                    @endforeach
-                </ul>
-            @else
-                <div class="flex justify-center items-center h-full">
-                    <p class="text-lg text-gray-600">投稿はありません。</p>
-                </div>
-            @endif
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <?php
+                    /*
+                    // ユーザーが選んだ服の画像のパスを保存
+                    session(['path' => 'value']);
+
+                    // ユーザーが選んだ服の画像のパスを取得
+                    $value = session('path');
+
+                    // StoreClothesテーブルのpictureからランダムにpathを選択
+                    use App\Models\StoreClothes;
+                    use App\Models\Category;
+
+                    // ユーザーが指定したカテゴリーID
+                    $categoryId = 1; // 例としてカテゴリーID 1を指定
+
+                    // 指定したカテゴリーに属するStoreClothesからランダムにpictureを取得
+                    $randomPicture = StoreClothes::whereHas('categories', function($query) use ($categoryId) {
+                        $query->where('id', $categoryId);
+                    })->inRandomOrder()->first()->picture;
+                    
+                    // 取得したランダムな画像を表示
+                    echo '<img src="' . $randomPicture . '" alt="Recommended Clothing">';
+
+                    // 店の名前を取得
+                    $storeName = StoreClothes::whereHas('categories', function($query) use ($categoryId) {
+                        $query->where('id', $categoryId);
+                    })->inRandomOrder()->first()->stores()->first()->name;
+
+                    // 店の名前を表示
+                    echo '<p>Store Name: ' . $storeName . '</p>';
+                    */
+                ?>
+                こんな服がおすすめ！
+            </div>
         </div>
     </div>
 </x-app-layout>
