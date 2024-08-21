@@ -14,6 +14,9 @@
             <a href="{{ route('myposts') }}" class="inline-block ml-4 py-2 px-4 btn btn-secondary text-decoration-none">
                 {{ __('自分の投稿を確認する') }}
             </a>
+            <a href="{{ route('background') }}" class="inline-block ml-4 py-2 px-4 btn btn-secondary text-decoration-none">
+                {{ __('自分の投稿を確認する') }}
+            </a>
         </div>
 
         <div class="my-4">
