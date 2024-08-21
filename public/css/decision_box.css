@@ -1,0 +1,27 @@
+.decision_box{
+    width:300px;
+    margin:0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align:center;
+    background:#c0c0c0;
+    border:#ffffff 5px solid;
+    border-radius:30px;
+    box-shadow: -4px -4px 8px #fff, 4px 4px 8px rgb(0 0 0 / 24%);
+}
+.decision_box:hover{
+    background-color: rgb(166, 166, 166);
+}
+
+.decision_img {
+    margin: auto;
+    text-align:center;
+}
+
+.decision_img_glass {
+    top: 1;
+    bottom: 1;
+    left: 1;
+    right: 1;
+    position: absolute;
+}
