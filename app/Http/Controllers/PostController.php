@@ -8,6 +8,19 @@ use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
+    public function title() {
+        return view('post.title');
+    }
+    public function select() {
+        return view('post.select');
+    }
+    public function decision() {
+        return view('post.decision');
+    }
+    public function recommend() {
+        return view('post.recommend');
+    }
+    
     public function index()
     {
         $posts = Post::orderBy('updated_at', 'desc')->get();
