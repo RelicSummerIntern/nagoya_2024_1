@@ -17,6 +17,11 @@
                         {{ __('掲示板') }}
                     </x-nav-link>
                 </div>
+                <div>    
+                    <x-nav-link :href="route('payment')" :active="request()->routeIs('payment')" class="text-decoration-none">
+                        {{ __('payment_menu') }}
+                    </x-nav-link>
+                </div>
             </div>
 
 
@@ -40,7 +45,6 @@
                         <x-dropdown-link :href="route('profile.edit')" class="text-decoration-none">
                             {{ __('Profile') }}
                         </x-dropdown-link>
-
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf

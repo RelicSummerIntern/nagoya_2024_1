@@ -47,6 +47,42 @@
             @endif
         </div>
 
+        <!-- height -->
+        <div class="mt-4">
+            <x-input-label for="height" :value="__('Height')" />
+            <x-text-input id="height" class="block mt-1 w-full" type="text" name="height" :value="old('height', $user->height)" required autocomplete="username" />
+            <x-input-error :messages="$errors->get('height')" class="mt-2" />
+        </div>
+
+        <!-- weight -->
+        <div class="mt-4">
+            <x-input-label for="weight" :value="__('Weight')" />
+            <x-text-input id="weight" class="block mt-1 w-full" type="text" name="weight" :value="old('weight', $user->weight)" required autocomplete="username" />
+            <x-input-error :messages="$errors->get('weight')" class="mt-2" />
+        </div>
+
+        <!-- sex -->
+        <div class="mt-4">
+            <x-input-label for="sex" :value="__('Sex')" />
+            <select id="sex" name="sex" class="block mt-1 w-full" :value="old('sex', $user->sex)" required autocomplete="username">
+                <option value=2 {{ old('sex', $user->sex) == 2 ? 'selected' : '' }}>女</option>
+                <option value=1 {{ old('sex', $user->sex) == 1 ? 'selected' : '' }}>男</option>
+            </select>
+            <x-input-error :messages="$errors->get('sex')" class="mt-2" />
+        </div>
+        
+        <!-- favorite_cotegory -->
+        <div class="mt-4">
+            <x-input-label for="favorite_cotegory" :value="__('Favorite Category')" />
+            <select id="favorite_cotegory" name="favorite_cotegory" class="block mt-1 w-full" :value="old('favorite_cotegory', $user->favorite_cotegory)" required autocomplete="username">
+                <option value=1 {{ old('favorite_cotegory', $user->favorite_cotegory) == 1 ? 'selected' : '' }}>かっこいい</option>
+                <option value=2 {{ old('favorite_cotegory', $user->favorite_cotegory) == 2 ? 'selected' : '' }}>かわいい</option>
+                <option value=3 {{ old('favorite_cotegory', $user->favorite_cotegory) == 3 ? 'selected' : '' }}>その他</option>
+            </select>
+            
+            <x-input-error :messages="$errors->get('favorite_cotegory')" class="mt-2" />
+        </div>
+
         <div class="flex items-center gap-4">
             <x-primary-button>{{ __('Save') }}</x-primary-button>
 

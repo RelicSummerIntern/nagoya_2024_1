@@ -21,6 +21,10 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'height',
+        'weight',
+        'sex',
+        'favorite_cotegory',
     ];
 
     /**
@@ -41,6 +45,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
+        'height' => 'float',
+        'weight' => 'float',
     ];
 
     public function posts()

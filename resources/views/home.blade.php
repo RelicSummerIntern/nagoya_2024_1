@@ -1,10 +1,9 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            古着みっけ
-        </h2>
-    </x-slot>
 
+        <h2 class="flex justify-center font-semibold text-3xl text-gray-800 bg-white leading-tight mb=0">
+            古着みっけ👁👁
+        </h2>   
+<div class="min-h-screen bg-blue-100">
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
@@ -14,10 +13,10 @@
                 </a>
             </div>
         </div>
-
+</div>
         
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-           <img src="{{ asset('images/r7bfpj56.png') }}" width="100%" alt="背景画像です" >
+           <img src="{{ asset('images/r7bfpj56.png') }}" width="100%" height="90%" alt="背景画像です" >
         </div>
     </div>
     

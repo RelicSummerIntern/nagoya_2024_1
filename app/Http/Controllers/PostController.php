@@ -34,7 +34,11 @@ class PostController extends Controller
     public function recommend() {
         return view('post.recommend');
     }
-    
+
+    public function chat() {
+        return view('post.chat');
+    }
+
 
     public function index()
     {
@@ -124,5 +128,12 @@ class PostController extends Controller
         $posts = Post::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->get();
         return view('background', compact('posts'));
     }
+
+    public function payment()
+{
+    return view('payment');
+}
+
+
 }
 
