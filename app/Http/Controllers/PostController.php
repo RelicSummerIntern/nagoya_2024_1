@@ -34,7 +34,11 @@ class PostController extends Controller
     public function recommend() {
         return view('post.recommend');
     }
-    
+
+    public function chat() {
+        return view('post.chat');
+    }
+
 
     public function index()
     {
