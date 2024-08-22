@@ -10,7 +10,7 @@
                 <div class="icon"></div>
                 <div class="chat_box">
                     <img src = "{{asset('img/test.jpg')}}" width = 150 class = "decision_img";>
-                    <a href="{{ route('post.select') }}" class="chatbutton">
+                    <a href="{{ route('payment') }}" class="chatbutton">
                         <font color = "000000" size = 5;>{{ __('購入') }}</font>
                     </a>
                 </div>
