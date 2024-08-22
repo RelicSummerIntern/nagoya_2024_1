@@ -4,8 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Str;
-
+use Illuminate\Support\Str; 
 
 class DatabaseSeeder extends Seeder
 {
@@ -23,6 +22,25 @@ class DatabaseSeeder extends Seeder
             'remember_token' => Str::random(10),
             'created_at' => now(),
             'updated_at' => now(),
+        ]);
+
+        DB::table('store_clothes')->insert([
+            [
+                'picture' => 'img/gpan1.png',
+                'store_id' => '1',
+                'category_id' => '1',
+            ],
+            [
+                'picture' => 'img/gpan2.png',
+                'store_id' => '2',
+                'category_id' => '2',
+            ],
+            [
+                'picture' => 'img/sukesuke.png',
+                'store_id' => '3',
+                'category_id' => '3',
+            ],
+            
         ]);
     }
 }
