@@ -77,6 +77,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/background', [PostController::class, 'background'])->name('background');
     Route::get('/payment', [PostController::class, 'payment'])->name('payment');
     Route::get('/point', [PostController::class, 'point'])->name('point');
+    Route::get('/qr', [PostController::class, 'qr'])->name('qr');
+
+
 
 
 });

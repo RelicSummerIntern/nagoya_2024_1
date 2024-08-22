@@ -146,7 +146,10 @@ public function map()
     return view('map');
 }
 
-
+public function qr()
+{
+    return view('qr');
+}
 
 }
 

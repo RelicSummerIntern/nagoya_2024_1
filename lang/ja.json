@@ -142,5 +142,10 @@
     "Weight":"体重",
     "Sex":"性別",
     "Favorite_cotegory":"好きなカテゴリ",
-    "payment_menu":"決済画面"
+    "payment_menu":"決済画面",
+    "Clothes":"服を選択する",
+    "Chat":"チャット",
+    "Map":"マップ",
+    "QR":"QRコードの表示"
+
 }

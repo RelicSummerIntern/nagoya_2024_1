@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('投稿一覧') }}
+            {{ __('メニュー画面') }}
         </h2>
     </x-slot>
 
@@ -18,6 +18,10 @@
 
             <a href="{{ route('map') }}" class="inline-block ml-4 py-2 px-4 btn btn-secondary text-decoration-none">
                 {{ __('Map') }}
+            </a>
+
+            <a href="{{ route('qr') }}" class="inline-block ml-4 py-2 px-4 btn btn-secondary text-decoration-none">
+                {{ __('QR') }}
             </a>
         </div>
 
