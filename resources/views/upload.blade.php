@@ -28,8 +28,23 @@
             <div class="flex flex-col space-y-4">
                 <label for="image" class="block text-gray-700">Choose an image:</label>
                 <input type="file" id="image" name="image" accept="image/*" class="border border-gray-300 rounded p-2">
+                <img id="image-preview" class="mt-4 max-w-xs h-auto hidden" alt="Image preview">
                 <button type="submit" class="bg-blue-500 text-black p-2 rounded hover:bg-blue-600">Upload Image</button>
             </div>
+            <script>
+            document.getElementById('image').addEventListener('change', function(event) {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        const img = document.getElementById('image-preview');
+                        img.src = e.target.result;
+                        img.classList.remove('hidden'); // 画像を表示
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+            </script>
         </form>
     </div>
 </x-app-layout>

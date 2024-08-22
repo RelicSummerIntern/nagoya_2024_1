@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
             'height' => 170.5,
             'weight' => 65.0,
             'sex' => 'male',
-            'favorite_cotegory' => 'かわいい',
+            'favorite_cotegory' => 'cute',
             'remember_token' => Str::random(10),
             'created_at' => now(),
             'updated_at' => now(),
