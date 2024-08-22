@@ -9,7 +9,6 @@
     <img src = "{{asset('img/test.jpg')}}" width = 300 class = "decision_img";>
         <div class="my-4">
             <a href="{{ route('post.recommend') }}" class="decision_box">
-                <img src = "{{asset('img/magnifying_glass.png')}}" width = 40 class = "decision_img_glass">
                 <font color = "000000" size = 5;>{{ __('検索') }}</font>
             </a>
 
