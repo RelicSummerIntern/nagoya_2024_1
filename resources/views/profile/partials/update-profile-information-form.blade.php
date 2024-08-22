@@ -65,8 +65,8 @@
         <div class="mt-4">
             <x-input-label for="sex" :value="__('Sex')" />
             <select id="sex" name="sex" class="block mt-1 w-full" :value="old('sex', $user->sex)" required autocomplete="username">
-                <option value="female" {{ old('sex', $user->sex) == 'female' ? 'selected' : '' }}>女</option>
-                <option value="male" {{ old('sex', $user->sex) == 'male' ? 'selected' : '' }}>男</option>
+                <option value=2 {{ old('sex', $user->sex) == 2 ? 'selected' : '' }}>女</option>
+                <option value=1 {{ old('sex', $user->sex) == 1 ? 'selected' : '' }}>男</option>
             </select>
             <x-input-error :messages="$errors->get('sex')" class="mt-2" />
         </div>
@@ -75,9 +75,9 @@
         <div class="mt-4">
             <x-input-label for="favorite_cotegory" :value="__('Favorite Category')" />
             <select id="favorite_cotegory" name="favorite_cotegory" class="block mt-1 w-full" :value="old('favorite_cotegory', $user->favorite_cotegory)" required autocomplete="username">
-                <option value="cool" {{ old('favorite_cotegory', $user->favorite_cotegory) == 'cool' ? 'selected' : '' }}>かっこいい</option>
-                <option value="cute" {{ old('favorite_cotegory', $user->favorite_cotegory) == 'cute' ? 'selected' : '' }}>かわいい</option>
-                <option value="other" {{ old('favorite_cotegory', $user->favorite_cotegory) == 'other' ? 'selected' : '' }}>その他</option>
+                <option value=1 {{ old('favorite_cotegory', $user->favorite_cotegory) == 1 ? 'selected' : '' }}>かっこいい</option>
+                <option value=2 {{ old('favorite_cotegory', $user->favorite_cotegory) == 2 ? 'selected' : '' }}>かわいい</option>
+                <option value=3 {{ old('favorite_cotegory', $user->favorite_cotegory) == 3 ? 'selected' : '' }}>その他</option>
             </select>
             
             <x-input-error :messages="$errors->get('favorite_cotegory')" class="mt-2" />
