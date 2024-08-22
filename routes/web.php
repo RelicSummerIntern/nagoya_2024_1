@@ -33,7 +33,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/post/select', [PostController::class, 'select'])->name('post.select');
     Route::get('/post/recommend', [PostController::class, 'recommend'])->name('post.recommend');
     Route::get('/post/decision', [PostController::class, 'decision'])->name('post.decision');
-    
+    Route::get('/post/chat', [PostController::class, 'chat'])->name('post.chat');
+
     Route::get('/post/index', [PostController::class, 'index'])->name('post.index');
     Route::get('/post/create', [PostController::class, 'create'])->name('post.create');
     Route::post('/post/store', [PostController::class, 'store'])->name('post.store');
