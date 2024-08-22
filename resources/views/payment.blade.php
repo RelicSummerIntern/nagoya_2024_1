@@ -125,7 +125,6 @@
             });
 
 
-
             // 選択された支払い方法のセクションを表示する
             if (selectedMethod === 'credit') {
                 document.getElementById('credit-section').style.display = 'block';
