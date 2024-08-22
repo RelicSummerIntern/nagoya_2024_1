@@ -38,6 +38,12 @@ docker-compose exec laravel.test npm run dev
 docker-compose stop
 ```
 
+## MySQLエラー対応
+docker-compose down --volumes
+docker-compose build --no-cache
+docker-compose up -d
+docker-compose exec laravel.test php artisan migrate:fresh
+
 ## URLは下記のものを使用してください。
 サンプルアプリ：http://localhost/
 
