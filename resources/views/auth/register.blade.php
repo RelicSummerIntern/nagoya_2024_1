@@ -39,23 +39,30 @@
             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
         </div>
 
+
+
         <!-- height -->
-        <div>
+        <div class="mt-4">
+
             <x-input-label for="height" :value="__('Height')" />
             <x-text-input id="height" class="block mt-1 w-full" type="text" name="height" :value="old('height')" required autofocus autocomplete="height" />
             <x-input-error :messages="$errors->get('height')" class="mt-2" />
         </div>
 
 
+
+
         <!-- weight -->
-        <div>
+        <div class="mt-4">
+
             <x-input-label for="weight" :value="__('Weight')" />
             <x-text-input id="weight" class="block mt-1 w-full" type="text" name="weight" :value="old('weight')" required autofocus autocomplete="weight" />
             <x-input-error :messages="$errors->get('weight')" class="mt-2" />
         </div>
 
+
         <!-- sex -->
-        <div>
+        <div class="mt-4">
             <x-input-label for="sex" :value="__('Sex')" />
             <select id="sex" name="sex" class="block mt-1 w-full" required autofocus>
                 <option value="" disabled selected>選択してください</option>
@@ -66,7 +73,7 @@
         </div>
         
         <!-- favorite_cotegory -->
-        <div>
+        <div class="mt-4">
             <x-input-label for="favorite_cotegory" :value="__('Favorite_cotegory')" />
             
             <select id="favorite_cotegory" name="favorite_cotegory" class="block mt-1 w-full" required autofocus>
@@ -89,5 +96,6 @@
                 {{ __('Register') }}
             </x-primary-button>
         </div>
+
     </form>
 </x-guest-layout>

@@ -32,13 +32,13 @@ docker-compose up -d
 docker-compose exec laravel.test npm run dev
 ```
 
-## 停止する方法
+## 停止するには以下のコマンドを実行する
 
 ```sh
 docker-compose stop
 ```
 
-## URL
+## URLは下記のものを使用してください。
 サンプルアプリ：http://localhost/
 
 phpMyAdmin: http://localhost:8080/
