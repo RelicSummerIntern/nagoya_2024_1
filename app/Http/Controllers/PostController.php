@@ -148,7 +148,7 @@ public function map()
 
 public function qr()
 {
-    return view('qr');
+    return view('qrcode');
 }
 
 }
