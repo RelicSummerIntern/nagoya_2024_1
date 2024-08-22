@@ -48,8 +48,8 @@
 
                 <!-- 右上の服屋の名前と金額 -->
                 <div class="store-info">
-                    <h2 id="store-name" class="text-xl font-semibold text-gray-800">服屋の名前</h2>
-                    <p id="store-amount" class="text-lg font-medium text-gray-600">金額: ¥1000</p>
+                    <h2 id="store-name" class="text-xl font-semibold text-gray-800">古着屋バナナ</h2>
+                    <p id="store-amount" class="text-lg font-medium text-gray-600">金額: ¥3000</p>
                 </div>
             </div>
 
@@ -58,27 +58,18 @@
                 <label class="block text-sm font-medium text-gray-700">支払い方法</label>
                 <select id="payment-method" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                     <option value="" selected disabled>選択してください</option>
-                    <option value="cash">現金支払い</option>
                     <option value="credit">クレジットカード支払い</option>
                     <option value="paypay">PayPay支払い</option>
                 </select>
             </div>
 
-            <!-- 現金支払いセクション -->
-            <div id="cash-section" class="payment-method-section">
-                <div class="bg-white shadow rounded-lg p-6">
-                    <p>現金支払いを選択しました。</p>
-                    <!-- 決済額入力フィールド -->
-                    <div class="cash-payment-options mb-4">
-                        <label for="cash_amount" class="block text-sm font-medium text-gray-700">決済額</label>
-                        <input type="number" id="cash_amount" name="cash_amount" placeholder="1000" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
-                    </div>
-                </div>
-            </div>
+
 
             <!-- クレジットカード支払いセクション -->
             <div id="credit-section" class="payment-method-section">
                 <div class="bg-white shadow rounded-lg p-6">
+                <p>クレジットカード支払いを選択しました。</p>
+
                     <form>
                         <div class="mb-4">
                             <label for="card_number" class="block text-sm font-medium text-gray-700">カード番号</label>
@@ -114,8 +105,6 @@
                 </div>
             </div>
 
-
-
             <!-- 提出ボタン -->
             <div>
                 <button type="button" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
@@ -135,14 +124,7 @@
                 section.style.display = 'none';
             });
 
-            // 現金支払いオプションを表示する
-            if (selectedMethod === 'cash') {
-                document.getElementById('cash-section').style.display = 'block';
-                document.querySelector('.cash-payment-options').style.display = 'block';
-                document.getElementById('cash_amount').value = amount; // 初期値を設定
-            } else {
-                document.querySelector('.cash-payment-options').style.display = 'none';
-            }
+
 
             // 選択された支払い方法のセクションを表示する
             if (selectedMethod === 'credit') {
