@@ -74,7 +74,6 @@
         <!-- favorite_cotegory -->
         <div class="mt-4">
             <x-input-label for="favorite_cotegory" :value="__('Favorite Category')" />
-            
             <select id="favorite_cotegory" name="favorite_cotegory" class="block mt-1 w-full" :value="old('favorite_cotegory', $user->favorite_cotegory)" required autocomplete="username">
                 <option value="cool" {{ old('favorite_cotegory', $user->favorite_cotegory) == 'cool' ? 'selected' : '' }}>かっこいい</option>
                 <option value="cute" {{ old('favorite_cotegory', $user->favorite_cotegory) == 'cute' ? 'selected' : '' }}>かわいい</option>
