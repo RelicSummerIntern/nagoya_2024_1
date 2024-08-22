@@ -15,17 +15,6 @@
                 {{ __('自分の投稿を確認する') }}
             </a>
 
-
-
-            <a href="{{ route('clothes') }}" class="inline-block ml-4 py-2 px-4 btn btn-secondary text-decoration-none">
-                {{ __('Clothes') }}
-            </a>
-
-            <a href="{{ route('test') }}" class="inline-block ml-4 py-2 px-4 btn btn-secondary text-decoration-none">
-                {{ __('投稿') }}
-            </a>
-
-
             <a href="{{ route('postc') }}" class="inline-block ml-4 py-2 px-4 btn btn-secondary text-decoration-none">
                 {{ __('Clothes') }}
 
