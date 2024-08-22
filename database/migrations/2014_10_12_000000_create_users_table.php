@@ -22,8 +22,8 @@ return new class extends Migration
             
             $table->float('height')->nullable();
             $table->float('weight')->nullable();
-            $table->string('sex')->nullable();
-            $table->string('favorite_cotegory')->nullable();  
+            $table->integer('sex')->nullable();
+            $table->integer('favorite_cotegory')->nullable();  
         });
     }
 
