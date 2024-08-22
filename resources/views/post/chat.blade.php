@@ -20,18 +20,21 @@
                     @endphp
                     <font color = "000000" size = 5;>{!! nl2br(e($text)) !!}</font>
                 </div>
-            </div>
-            @if($_GET['name'] != null) 
-            <div class="hidden sm:flex sm:items-center sm:ml-7" >
-                <div class="userchatbox">
-                    <font color = "000000" size = 5;>{!! nl2br(e($_GET['name'])) !!}</font>
+
+                @if(isset($_GET['name']) != null) 
+                <div class="hidden sm:flex sm:items-center sm:ml-7" >
+                    <div class="userchatbox">
+                        <font color = "000000" size = 5;>{!! nl2br(e($_GET['name'])) !!}</font>
+                    </div>
                 </div>
+                @endif
             </div>
-            @endif
-            <form method = "GET" action="chat" class="Footer">
-                <input type = "text" placeholder = "チャットを入力 "name = "name">
-                <input type = "submit" value = "送信">
-            </form>
+            <div class="my-4">
+                <form method = "GET" action="{{ route('post.chat') }}" class="Footer">
+                    <input type = "text" placeholder = "チャットを入力 " name="name">
+                    <input type = "submit" value = "送信">
+                </form>
+            </div>
             <div class="my-4">
             @if (!empty($posts))
                 <ul>
