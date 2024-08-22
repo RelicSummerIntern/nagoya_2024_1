@@ -44,6 +44,9 @@ docker-compose build --no-cache
 docker-compose up -d
 docker-compose exec laravel.test php artisan migrate:fresh
 
+## seaderをリセットして実行
+docker-compose exec laravel.test php artisan migrate:fresh --seed
+
 ## URLは下記のものを使用してください。
 サンプルアプリ：http://localhost/
 
