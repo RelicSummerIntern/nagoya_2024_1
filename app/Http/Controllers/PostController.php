@@ -11,13 +11,14 @@ class PostController extends Controller
 
     public function handleDecision(Request $request)
     {
-        $selectedClothesId = $request->input('selected_clothes');
+        $selectedClothesJson = $request->input('selected_clothes');
         
-        // $selectedClothesIdを使って処理を行います
+        // $selectedClothesJsonを使って処理を行います
         // 例えば、データベースに保存したり、ビューに渡したりします
+        $selectedClothes = json_decode($selectedClothesJson);
 
         // 選択されたアイテムのIDを使って、次のページにリダイレクトすることもできます
-        return view('clothes', compact('selectedClothesId'));
+        return view('clothes', compact('selectedClothes'));
     }
 
 
@@ -68,9 +69,9 @@ class PostController extends Controller
         return view('my-posts', compact('posts'));
     }
 
-    public function test()
+    public function upload()
     {
-        return view('test2');
+        return view('upload');
     }
 
     public function clothes()
