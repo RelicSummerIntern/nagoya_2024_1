@@ -67,6 +67,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/decision', [PostController::class, 'decision']) ->name('decision');
     Route::get('/upload', [PostController::class, 'upload']) ->name('upload');
     Route::get('/chat', [PostController::class, 'chat']) ->name('chat');
+    Route::get('/map', [PostController::class, 'map']) ->name('map');
+
 
     Route::post('/upload', [UploadController::class, 'upload'])->name('upload.submit');
     Route::post('/decision', [PostController::class, 'handleDecision'])->name('decision');
@@ -74,6 +76,8 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/background', [PostController::class, 'background'])->name('background');
     Route::get('/payment', [PostController::class, 'payment'])->name('payment');
+    Route::get('/point', [PostController::class, 'point'])->name('point');
+
 
 });
 

@@ -107,9 +107,10 @@
 
             <!-- 提出ボタン -->
             <div>
-                <button type="button" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                <a href= " {{ route('point') }}"  class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+
                     決済を完了する
-                </button>
+                </a>
             </div>
         </main>
     </div>

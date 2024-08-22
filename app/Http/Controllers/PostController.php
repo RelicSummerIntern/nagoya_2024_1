@@ -134,6 +134,17 @@ class PostController extends Controller
     return view('payment');
 }
 
+public function point()
+{
+    return view('point');
+}
+
+public function map()
+{
+    return view('map');
+}
+
+
 
 }
 

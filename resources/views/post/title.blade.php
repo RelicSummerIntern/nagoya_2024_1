@@ -16,8 +16,8 @@
             </a>
 
 
-            <a href="{{ route('postc') }}" class="inline-block ml-4 py-2 px-4 btn btn-secondary text-decoration-none">
-                {{ __('Clothes') }}
+            <a href="{{ route('map') }}" class="inline-block ml-4 py-2 px-4 btn btn-secondary text-decoration-none">
+                {{ __('Map') }}
             </a>
         </div>
 
