@@ -5,8 +5,9 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('home') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
+                     <a href="{{ route('home') }}" class="flex items-center">
+                     <img src="{{ asset('images/homebutton.png') }}" alt="Home" class="h-8 w-auto" />
+ 
                     </a>
                 </div>
 
@@ -17,6 +18,7 @@
                     </x-nav-link>
                 </div>
             </div>
+
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
