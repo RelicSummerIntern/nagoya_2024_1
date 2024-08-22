@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -12,13 +13,14 @@ class PostController extends Controller
     public function handleDecision(Request $request)
     {
         $selectedClothesJson = $request->input('selected_clothes');
+        $user = User::where('id', Auth::id())->first();
         
         // $selectedClothesJsonを使って処理を行います
         // 例えば、データベースに保存したり、ビューに渡したりします
         $selectedClothes = json_decode($selectedClothesJson);
 
         // 選択されたアイテムのIDを使って、次のページにリダイレクトすることもできます
-        return view('clothes', compact('selectedClothes'));
+        return view('recommend', compact('selectedClothes', 'user'));
     }
 
 
