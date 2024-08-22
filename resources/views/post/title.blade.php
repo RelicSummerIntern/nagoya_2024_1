@@ -1,18 +1,23 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('ユーザー情報入力画面') }}
+            {{ __('投稿一覧') }}
         </h2>
     </x-slot>
 
     <div class="max-w-7xl mx-auto mt-10 px-4 sm:px-6 lg:px-8">
         <div class="my-4">
-            <a href="{{ route('post.select') }}" class="inline-block py-2 px-4 btn btn-primary text-decoration-none">
-                {{ __('決定') }}
+            <a href="{{ route('postc') }}" class="inline-block py-2 px-4 btn btn-primary text-decoration-none">
+                {{ __('Clothes') }}
             </a>
 
-            <a href="{{ route('myposts') }}" class="inline-block ml-4 py-2 px-4 btn btn-secondary text-decoration-none">
-                {{ __('etst') }}
+            <a href="{{ route('chat') }}" class="inline-block ml-4 py-2 px-4 btn btn-secondary text-decoration-none">
+                {{ __('Chat') }}
+            </a>
+
+
+            <a href="{{ route('postc') }}" class="inline-block ml-4 py-2 px-4 btn btn-secondary text-decoration-none">
+                {{ __('Clothes') }}
             </a>
         </div>
 
@@ -31,9 +36,6 @@
                     @endforeach
                 </ul>
             @else
-                <div class="flex justify-center items-center h-full">
-                    <p class="text-lg text-gray-600">test</p>
-                </div>
             @endif
         </div>
     </div>
