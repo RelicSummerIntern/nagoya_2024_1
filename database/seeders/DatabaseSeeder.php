@@ -42,5 +42,17 @@ class DatabaseSeeder extends Seeder
             ],
             
         ]);
+        DB::table('store')->insert([
+            [
+                'name' => '石田古着屋',
+            ],
+            [
+                'name' => 'Vintage shop 8',
+            ],
+            [
+                'name' => 'トゥルーカラーズ',
+            ],
+            
+        ]);
     }
 }
