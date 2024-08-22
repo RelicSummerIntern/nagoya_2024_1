@@ -40,7 +40,24 @@ class DatabaseSeeder extends Seeder
                 'store_id' => '3',
                 'category_id' => '3',
             ],
-            
         ]);
+
+        // DB::table('user_clothes')->insert([
+        //     [
+        //         'picture' => 'img/gpan1.png',
+        //         'store_id' => '1',
+        //         'category_id' => '1',
+        //     ],
+        //     [
+        //         'picture' => 'img/gpan2.png',
+        //         'store_id' => '2',
+        //         'category_id' => '2',
+        //     ],
+        //     [
+        //         'picture' => 'img/sukesuke.png',
+        //         'store_id' => '3',
+        //         'category_id' => '3',
+        //     ],
+        // ]);
     }
 }

@@ -12,7 +12,7 @@
                 </div>
 
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <!-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('post.index')" :active="request()->routeIs('post.index')" class="text-decoration-none">
                         {{ __('掲示板') }}
                     </x-nav-link>
@@ -21,7 +21,7 @@
                     <x-nav-link :href="route('payment')" :active="request()->routeIs('payment')" class="text-decoration-none">
                         {{ __('payment_menu') }}
                     </x-nav-link>
-                </div>
+                </div> -->
             </div>
 
 
