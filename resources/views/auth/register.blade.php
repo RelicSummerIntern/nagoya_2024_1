@@ -39,6 +39,54 @@
             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
         </div>
 
+
+
+        <!-- height -->
+        <div class="mt-4">
+
+            <x-input-label for="height" :value="__('Height')" />
+            <x-text-input id="height" class="block mt-1 w-full" type="text" name="height" :value="old('height')" required autofocus autocomplete="height" />
+            <x-input-error :messages="$errors->get('height')" class="mt-2" />
+        </div>
+
+
+
+
+        <!-- weight -->
+        <div class="mt-4">
+
+            <x-input-label for="weight" :value="__('Weight')" />
+            <x-text-input id="weight" class="block mt-1 w-full" type="text" name="weight" :value="old('weight')" required autofocus autocomplete="weight" />
+            <x-input-error :messages="$errors->get('weight')" class="mt-2" />
+        </div>
+
+
+        <!-- sex -->
+        <div class="mt-4">
+            <x-input-label for="sex" :value="__('Sex')" />
+            <select id="sex" name="sex" class="block mt-1 w-full" required autofocus>
+                <option value="" disabled selected>選択してください</option>
+                <option value="1" {{ old('sex') == '1' ? 'selected' : '' }}>男</option>
+                <option value="2" {{ old('sex') == '2' ? 'selected' : '' }}>女</option>
+            </select>
+            <x-input-error :messages="$errors->get('sex')" class="mt-2" />
+        </div>
+        
+        <!-- favorite_cotegory -->
+        <div class="mt-4">
+            <x-input-label for="favorite_cotegory" :value="__('Favorite_cotegory')" />
+            
+            <select id="favorite_cotegory" name="favorite_cotegory" class="block mt-1 w-full" required autofocus>
+                <option value="" disabled selected>選択してください</option>
+                <option value="1" {{ old('favorite_cotegory') == '1' ? 'selected' : '' }}>かっこいい</option>
+                <option value="2" {{ old('favorite_cotegory') == '2' ? 'selected' : '' }}>かわいい</option>
+                <option value="3" {{ old('favorite_cotegory') == '3' ? 'selected' : '' }}>その他</option>
+            </select>
+            
+            <x-input-error :messages="$errors->get('favorite_cotegory')" class="mt-2" />
+        </div>
+
+
         <div class="flex items-center justify-end mt-4">
             <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
                 {{ __('Already registered?') }}
@@ -48,5 +96,6 @@
                 {{ __('Register') }}
             </x-primary-button>
         </div>
+
     </form>
 </x-guest-layout>

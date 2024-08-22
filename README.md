@@ -1,6 +1,6 @@
 # Relicサマーインターン（26卒）のサンプルアプリ
 
-## 初回セットアップ手順（上から順番に実行）
+## 初回セットアップ手順（上から順番に実行）(あらた担当)
 
 ```sh
 # 作業ディレクトリに移動して作業を進めてください 
@@ -32,11 +32,17 @@ docker-compose up -d
 docker-compose exec laravel.test npm run dev
 ```
 
-## 停止する方法
+## 停止するには以下のコマンドを実行する
 
 ```sh
 docker-compose stop
 ```
+
+## MySQLエラー対応
+docker-compose down --volumes
+docker-compose build --no-cache
+docker-compose up -d
+docker-compose exec laravel.test php artisan migrate:fresh
 
 ## URLは下記のものを使用してください。
 サンプルアプリ：http://localhost/

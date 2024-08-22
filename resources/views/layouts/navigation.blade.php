@@ -5,8 +5,9 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('home') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
+                     <a href="{{ route('home') }}" class="flex items-center">
+                     <img src="{{ asset('images/homebutton.png') }}" alt="Home" class="h-8 w-auto" />
+ 
                     </a>
                 </div>
 
@@ -16,7 +17,13 @@
                         {{ __('掲示板') }}
                     </x-nav-link>
                 </div>
+                <div>    
+                    <x-nav-link :href="route('payment')" :active="request()->routeIs('payment')" class="text-decoration-none">
+                        {{ __('payment_menu') }}
+                    </x-nav-link>
+                </div>
             </div>
+
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
@@ -38,7 +45,6 @@
                         <x-dropdown-link :href="route('profile.edit')" class="text-decoration-none">
                             {{ __('Profile') }}
                         </x-dropdown-link>
-
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf

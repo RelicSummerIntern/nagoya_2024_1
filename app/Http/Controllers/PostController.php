@@ -8,6 +8,20 @@ use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
+
+    public function handleDecision(Request $request)
+    {
+        $selectedClothesJson = $request->input('selected_clothes');
+        
+        // $selectedClothesJsonを使って処理を行います
+        // 例えば、データベースに保存したり、ビューに渡したりします
+        $selectedClothes = json_decode($selectedClothesJson);
+
+        // 選択されたアイテムのIDを使って、次のページにリダイレクトすることもできます
+        return view('clothes', compact('selectedClothes'));
+    }
+
+
     public function title() {
         return view('post.title');
     }
@@ -20,9 +34,11 @@ class PostController extends Controller
     public function recommend() {
         return view('post.recommend');
     }
+
     public function chat() {
         return view('post.chat');
     }
+
 
     public function index()
     {
@@ -57,6 +73,23 @@ class PostController extends Controller
         return view('my-posts', compact('posts'));
     }
 
+    public function upload()
+    {
+        return view('upload');
+    }
+
+    public function clothes()
+    {
+        $posts = Post::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->get();
+        return view('clothes', compact('posts'));
+    }
+
+    // public function decision(Request $request)
+    // {
+    //     $option = $request->input('option');
+    //     return view('clothes');
+    // }
+
     public function edit($id)
     {
         $post = Post::findOrFail($id);
@@ -85,5 +118,22 @@ class PostController extends Controller
 
         return redirect()->route('myposts')->with('success', '投稿が削除されました');
     }
+
+
+
+
+
+    public function background()
+    {
+        $posts = Post::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->get();
+        return view('background', compact('posts'));
+    }
+
+    public function payment()
+{
+    return view('payment');
+}
+
+
 }
 
