@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
+
     public function handleDecision(Request $request)
     {
         $selectedClothesJson = $request->input('selected_clothes');
@@ -19,6 +20,21 @@ class PostController extends Controller
         // 選択されたアイテムのIDを使って、次のページにリダイレクトすることもできます
         return view('clothes', compact('selectedClothes'));
     }
+
+
+    public function title() {
+        return view('post.title');
+    }
+    public function select() {
+        return view('post.select');
+    }
+    public function decision() {
+        return view('post.decision');
+    }
+    public function recommend() {
+        return view('post.recommend');
+    }
+    
 
     public function index()
     {
@@ -97,6 +113,16 @@ class PostController extends Controller
         $post->delete();
 
         return redirect()->route('myposts')->with('success', '投稿が削除されました');
+    }
+
+
+
+
+
+    public function background()
+    {
+        $posts = Post::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->get();
+        return view('background', compact('posts'));
     }
 }
 

@@ -1,6 +1,6 @@
 # Relicサマーインターン（26卒）のサンプルアプリ
 
-## 初回セットアップ手順（上から順番に実行）
+## 初回セットアップ手順（上から順番に実行）(あらた担当)
 
 ```sh
 # 作業ディレクトリに移動して作業を進めてください 
@@ -38,7 +38,7 @@ docker-compose exec laravel.test npm run dev
 docker-compose stop
 ```
 
-## URL
+## URLは下記のものを使用してください。
 サンプルアプリ：http://localhost/
 
 phpMyAdmin: http://localhost:8080/
