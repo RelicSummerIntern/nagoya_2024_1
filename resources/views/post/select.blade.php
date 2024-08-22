@@ -14,6 +14,10 @@
             <a href="{{ route('myposts') }}" class="inline-block ml-4 py-2 px-4 btn btn-secondary text-decoration-none">
                 {{ __('etst') }}
             </a>
+
+            <a href="{{ route('payment') }}" class="inline-block ml-4 py-2 px-4 btn btn-secondary text-decoration-none">
+                {{ __('決済画面へ') }}
+            </a>
         </div>
 
         <div class="my-4">
