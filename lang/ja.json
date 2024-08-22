@@ -138,6 +138,8 @@
     "results": "件",
     "to": "から",
     "Showing": "表示中：",
-    "Weight": "体重",
-    "Height": "身長"
+    "Height": "身長",
+    "Weight":"体重",
+    "Sex":"性別",
+    "Favorite_cotegory":"好きなカテゴリ"
 }

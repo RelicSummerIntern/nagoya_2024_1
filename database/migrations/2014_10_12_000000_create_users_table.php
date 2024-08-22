@@ -21,6 +21,11 @@ return new class extends Migration
             $table->integer('weight')->nullable()->after('weight');
             $table->rememberToken();
             $table->timestamps();
+            
+            $table->float('height')->nullable();
+            $table->float('weight')->nullable();
+            $table->string('sex')->nullable();
+            $table->string('favorite_cotegory')->nullable();  
         });
     }
 
