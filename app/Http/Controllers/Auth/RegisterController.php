@@ -55,8 +55,8 @@ class RegisterController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'height' => ['required', 'numeric', 'min:0', 'max:300'],
             'weight' => ['required', 'numeric', 'min:0'],
-            'sex' => ['required', 'in:male,female'],
-            'favorite_cotegory' => ['required', 'in:cool,cute,other'],
+            'sex' => ['required', 'in:1,2'],
+            'favorite_cotegory' => ['required', 'in:1,2,3'],
         ]);
     }
 
