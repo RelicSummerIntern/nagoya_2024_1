@@ -32,7 +32,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/myposts', [PostController::class, 'myPosts'])->name('myposts');
     Route::get('/clothes', [PostController::class, 'clothes'])->name('clothes');
     Route::get('/decision', [PostController::class, 'decision']) ->name('decision');
-    Route::get('/test', [PostController::class, 'test']) ->name('test');
+    Route::get('/upload', [PostController::class, 'upload']) ->name('upload');
 
     Route::post('/upload', [UploadController::class, 'upload'])->name('upload.submit');
     Route::post('/decision', [PostController::class, 'handleDecision'])->name('decision');
