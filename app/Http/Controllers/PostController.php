@@ -124,5 +124,12 @@ class PostController extends Controller
         $posts = Post::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->get();
         return view('background', compact('posts'));
     }
+
+    public function payment()
+{
+    return view('payment');
+}
+
+
 }
 

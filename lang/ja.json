@@ -141,5 +141,6 @@
     "Height": "身長",
     "Weight":"体重",
     "Sex":"性別",
-    "Favorite_cotegory":"好きなカテゴリ"
+    "Favorite_cotegory":"好きなカテゴリ",
+    "payment_menu":"決済画面"
 }
