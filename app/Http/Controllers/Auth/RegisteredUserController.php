@@ -37,7 +37,7 @@ class RegisteredUserController extends Controller
             'height' => ['required', 'numeric'], 
             'weight' => ['required', 'numeric'],
             'sex' => ['required','integer'],
-            'favorite_cotegory' => ['required','sinteger']
+            'favorite_cotegory' => ['required','integer']
         ]);
 
         $user = User::create([

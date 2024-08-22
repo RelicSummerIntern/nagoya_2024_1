@@ -36,7 +36,7 @@ class PostController extends Controller
     }
 
     public function chat() {
-        return view('post.chat');
+        return view('chat');
     }
 
 

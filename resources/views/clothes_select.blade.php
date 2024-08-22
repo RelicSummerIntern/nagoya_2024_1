@@ -26,6 +26,15 @@
                                 選択
                             </label>
                         </div>
+
+                        <!-- 画像削除ボタン
+                        <form action="{{ route('clothes.delete-image', ['id' => $item->id]) }}" method="POST" class="mt-4">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('本当に削除しますか？')">
+                                {{ __('画像を削除') }}
+                            </button>
+                        </form> -->
                     </div>
                 @endforeach
             </div>
