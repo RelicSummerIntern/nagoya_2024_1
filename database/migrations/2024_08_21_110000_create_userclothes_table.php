@@ -10,8 +10,11 @@ class CreateUserClothesTable extends Migration
     {
         Schema::create('user_clothes', function (Blueprint $table) {
             $table->id(); // 'id' カラム
+            $table->unsignedBigInteger('user_id');
             $table->string('picture', 255); // 'picture' カラム
             $table->timestamps(); // 'created_at' と 'updated_at' カラム
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

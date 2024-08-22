@@ -5,7 +5,7 @@
                 {{ __('Clothes') }}
             </h2>
             <div class="my-2">
-                <a href="{{ route('decision') }}" class="inline-block py-2 px-4 btn btn-primary text-decoration-none">
+                <a href="{{ route('upload') }}" class="inline-block py-2 px-4 btn btn-primary text-decoration-none">
                     {{ __('服を追加する') }}
                 </a>
             </div>
@@ -22,7 +22,7 @@
                         <!-- ラジオボタン -->
                         <div class="mt-4 flex justify-center">
                             <label>
-                                <input type="radio" name="selected_clothes" value="{{ $item->id }}">
+                                <input type="radio" name="selected_clothes" value="{{ json_encode($item) }}">
                                 選択
                             </label>
                         </div>
