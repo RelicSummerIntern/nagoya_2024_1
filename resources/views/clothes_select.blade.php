@@ -13,7 +13,7 @@
     </x-slot>
 
     <div class="max-w-7xl mx-auto mt-10 sm:px-6 lg:px-8">
-        <form action="{{ route('decision') }}" method="POST">
+        <form action="{{ route('decision') }}" method="POST" id="clothesForm">
             @csrf
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 @foreach ($clothes as $item)
@@ -22,19 +22,10 @@
                         <!-- ラジオボタン -->
                         <div class="mt-4 flex justify-center">
                             <label>
-                                <input type="radio" name="selected_clothes" value="{{ json_encode($item) }}">
+                                <input type="radio" name="selected_clothes" value="{{ json_encode($item) }}" class="clothes-radio">
                                 選択
                             </label>
                         </div>
-
-                        <!-- 画像削除ボタン
-                        <form action="{{ route('clothes.delete-image', ['id' => $item->id]) }}" method="POST" class="mt-4">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-danger" onclick="return confirm('本当に削除しますか？')">
-                                {{ __('画像を削除') }}
-                            </button>
-                        </form> -->
                     </div>
                 @endforeach
             </div>
@@ -42,11 +33,24 @@
             <!-- 決定ボタン -->
             <div class="max-w-7xl mx-auto mt-10 px-4 sm:px-6 lg:px-8">
                 <div class="my-4">
-                    <button type="submit" class="inline-block py-2 px-4 btn btn-primary text-decoration-none">
+                    <button type="submit" class="inline-block py-2 px-4 btn btn-primary text-decoration-none" id="decisionButton" disabled>
                         {{ __('決定') }}
                     </button>
                 </div>
             </div>
         </form>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const radios = document.querySelectorAll('.clothes-radio');
+            const submitButton = document.getElementById('decisionButton');
+
+            radios.forEach(function (radio) {
+                radio.addEventListener('change', function () {
+                    submitButton.disabled = false;
+                });
+            });
+        });
+    </script>
 </x-app-layout>

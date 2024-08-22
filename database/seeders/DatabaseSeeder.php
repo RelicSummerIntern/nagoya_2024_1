@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('store_clothes')->insert([
-            [
+            [   
                 'picture' => 'img/gpan1.png',
                 'store_id' => '1',
                 'category_id' => '1',
@@ -55,20 +55,17 @@ class DatabaseSeeder extends Seeder
         ]);
 
         // DB::table('user_clothes')->insert([
-        //     [
-        //         'picture' => 'img/gpan1.png',
-        //         'store_id' => '1',
-        //         'category_id' => '1',
+        //     [   
+        //         'user_id' => '1'
+        //         'picture' => 'images/1724234718.png', //変更する
+        //         'created_at' => now(),
+        //         'updated_at' => now(),
         //     ],
-        //     [
-        //         'picture' => 'img/gpan2.png',
-        //         'store_id' => '2',
-        //         'category_id' => '2',
-        //     ],
-        //     [
-        //         'picture' => 'img/sukesuke.png',
-        //         'store_id' => '3',
-        //         'category_id' => '3',
+        //     [   
+        //         'user_id' => '1'
+        //         'picture' => 'img/1724234725.png', //変更する
+        //         'created_at' => now(),
+        //         'updated_at' => now(),
         //     ],
         // ]);
     }
