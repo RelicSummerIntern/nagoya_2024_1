@@ -16,6 +16,6 @@ class CreateStoreTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('store_clothes');
+        Schema::dropIfExists('store');
     }
 }

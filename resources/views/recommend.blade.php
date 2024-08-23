@@ -15,6 +15,7 @@
         if ($storeClothes) {
             $randomPicture = $storeClothes->picture;
         }
+        $store = App\Models\Store::where('id', $storeClothes->store_id)->first();
     ?>
 
     <div class="py-12">
@@ -34,7 +35,8 @@
                     <p>こんな服がおすすめ!!!</p>
                     <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">        
                         <img src="{{ asset($randomPicture) }}" alt="おすすめの服" width="300">             
-                    </div>           
+                    </div>
+                    <?php echo $store->name; ?>            
                 </div>
 
             </div> <!-- Flexコンテナ終了 -->
@@ -44,7 +46,7 @@
                 {{ __('購入する') }}
             </a>
 
-            <a href="{{ route('chat') }}" class="inline-block ml-4 py-2 px-4 btn btn-secondary text-decoration-none">
+            <a href="{{ route('chat', ['storeClothes' => $storeClothes->id]) }}" class="inline-block ml-4 py-2 px-4 btn btn-secondary text-decoration-none">
                 {{ __('Chat') }}
             </a>
 
