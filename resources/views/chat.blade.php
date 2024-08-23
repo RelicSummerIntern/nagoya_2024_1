@@ -13,7 +13,7 @@
                 <div class="icon"></div>
                 <div class="chat_box">
                     <img src = "{{asset($storeClothes->picture)}}" width = 150 class = "decision_img";>
-                    <a href="{{ route('payment') }}" class="chatbutton">
+                    <a href="{{ route('payment', ['storeClothes' => $storeClothes->id]) }}" class="chatbutton">
                         <font color = "000000" size = 5;>{{ __('購入') }}</font>
                     </a>
                 </div>
