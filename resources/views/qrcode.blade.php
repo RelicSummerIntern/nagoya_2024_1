@@ -10,7 +10,7 @@
 
             <!-- QRコード画像表示 -->
             <div class="bg-white shadow-md rounded-lg overflow-hidden mb-8">
-                <img src="{{ asset('img/qr.png') }}" class="w-full h-auto" alt="会員QRコード">
+                <img src="{{ asset('img/qr.png') }}" class="w-80 h-auto mx-auto" alt="会員QRコード">
             </div>
 
             <!-- ポイント情報 -->
