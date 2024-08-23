@@ -1,10 +1,13 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('古着屋バナナ') }}
+            {{ __('チャット画面') }}
             <link rel="stylesheet" href="/css/chat.css">
         </h2>
     </x-slot>
+    <?php
+        $store = App\Models\Store::where('id', $storeClothes->store_id)->first();
+    ?>
         <div class="max-w-7xl mx-auto mt-10 px-4 sm:px-6 lg:px-8">
             <div class="my-4">
                 <div class="icon"></div>
@@ -16,7 +19,9 @@
                 </div>
                 <div class="chat_box">
                     @php
-                    $text = "こんにちは！\n古着屋バナナです!\nこちらの商品の詳細やコーディネートについて質問があれば気軽にご相談ください!";
+                    $text = "こんにちは！
+                    {$store->name}です
+                    こちらの商品の詳細やコーディネートについて質問があれば気軽にご相談ください!";
                     @endphp
                     <font color = "000000" size = 5;>{!! nl2br(e($text)) !!}</font>
                 </div>
