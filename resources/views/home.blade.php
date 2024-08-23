@@ -1,7 +1,7 @@
 <x-app-layout>
 
         <h2 class="flex justify-center font-semibold text-3xl text-gray-800 bg-white leading-tight mb=0">
-            古着みっけ👁👁
+            Near Fashion
         </h2>   
 <div class="min-h-screen bg-blue-100">
     <div class="py-12">
