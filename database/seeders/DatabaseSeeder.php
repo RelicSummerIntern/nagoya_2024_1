@@ -26,30 +26,30 @@ class DatabaseSeeder extends Seeder
 
         DB::table('store_clothes')->insert([
             [   
-                'picture' => 'img/gpan1.png',
+                'picture' => 'img/sukesuke.png',
                 'store_id' => '1',
                 'category_id' => '1',
             ],
             [
-                'picture' => 'img/gpan2.png',
+                'picture' => 'img/skert.png',
                 'store_id' => '2',
                 'category_id' => '2',
             ],
             [
-                'picture' => 'img/sukesuke.png',
+                'picture' => 'img/gpan3.png',
                 'store_id' => '3',
                 'category_id' => '3',
             ],
         ]);
         DB::table('store')->insert([
             [
-                'name' => '石田古着屋',
+                'name' => '古着屋ミカン',
             ],
             [
-                'name' => 'Vintage shop 8',
+                'name' => '古着屋バナナ',
             ],
             [
-                'name' => 'トゥルーカラーズ',
+                'name' => '古着屋イチゴ',
             ],
             
         ]);
