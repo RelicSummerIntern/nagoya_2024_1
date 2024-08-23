@@ -78,8 +78,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/payment', [PostController::class, 'payment'])->name('payment');
     Route::get('/point', [PostController::class, 'point'])->name('point');
     Route::get('/qr', [PostController::class, 'qr'])->name('qr');
-
-
+    Route::get('/stores', [PostController::class, 'stores'])->name('stores');
+    Route::get('/chat_banana', [PostController::class, 'chat_banana'])->name('chat_banana');
+    Route::get('/chat_mikan', [PostController::class, 'chat_mikan'])->name('chat_mikan');
 
 
 });

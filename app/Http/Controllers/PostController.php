@@ -6,6 +6,8 @@ use App\Models\Post;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Clothes;
+use App\Models\UserClothes;
 
 class PostController extends Controller
 {
@@ -38,8 +40,21 @@ class PostController extends Controller
     }
 
     public function chat() {
-        return view('chat');
+        // クエリパラメータからselectedClothesを取得する
+        $selectedClothesId = request('selectedClothes');
+        $selectedClothes = Clothes::find($selectedClothesId);
+
+        return view('chat', compact('selectedClothes'));
     }
+
+    public function chat_banana() {
+        return view('chat_banana');
+    }
+
+    public function chat_mikan() {
+        return view('chat_mikan');
+    }
+
 
 
     public function index()
@@ -122,9 +137,6 @@ class PostController extends Controller
     }
 
 
-
-
-
     public function background()
     {
         $posts = Post::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->get();
@@ -132,24 +144,28 @@ class PostController extends Controller
     }
 
     public function payment()
-{
-    return view('payment');
-}
+    {
+        return view('payment');
+    }
 
-public function point()
-{
-    return view('point');
-}
+    public function point()
+    {
+        return view('point');
+    }
 
-public function map()
-{
-    return view('map');
-}
+    public function map()
+    {
+        return view('map');
+    }
 
-public function qr()
-{
-    return view('qrcode');
-}
+    public function qr()
+    {
+        return view('qrcode');
+    }
+    public function stores()
+    {
+        return view('stores');
+    }
 
 }
 
