@@ -43,7 +43,7 @@
             <div class="header-container">
                 <!-- 左上の画像 -->
                 <div>
-                    <img src="{{ asset('images/selected-image.png') }}" alt="Selected Image">
+                    <img src="{{ asset('images/sukesuke.png') }}" alt="Selected Image">
                 </div>
 
                 <!-- 右上の服屋の名前と金額 -->
