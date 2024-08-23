@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('チャット画面') }}
+            {{ __('古着屋ミカン') }}
             <link rel="stylesheet" href="/css/chat.css">
         </h2>
     </x-slot>
@@ -9,14 +9,14 @@
             <div class="my-4">
                 <div class="icon"></div>
                 <div class="chat_box">
-                    <img src = "{{asset($selectedClothes->picture)}}" width = 150 class = "decision_img";>
+                    <img src = "{{asset('img/test.png')}}" width = 150 class = "decision_img";>
                     <a href="{{ route('payment') }}" class="chatbutton">
                         <font color = "000000" size = 5;>{{ __('購入') }}</font>
                     </a>
                 </div>
                 <div class="chat_box">
                     @php
-                    $text = "こんにちは！\n古着屋バナナです!\nこちらの商品の詳細やコーディネートについて質問があれば気軽にご相談ください!";
+                    $text = "こんにちは！\n古着屋ミカンです!\nこちらの商品の詳細やコーディネートについて質問があれば気軽にご相談ください!";
                     @endphp
                     <font color = "000000" size = 5;>{!! nl2br(e($text)) !!}</font>
                 </div>

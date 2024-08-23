@@ -11,16 +11,16 @@
                 {{ __('Clothes') }}
             </a>
 
-            <a href="{{ route('chat') }}" class="inline-block ml-4 py-2 px-4 btn btn-secondary text-decoration-none">
+            <!-- <a href="{{ route('chat') }}" class="inline-block ml-4 py-2 px-4 btn btn-secondary text-decoration-none">
                 {{ __('Chat') }}
+            </a> -->
+
+
+            <a href="{{ route('stores') }}" class="inline-block py-2 px-4 btn btn-primary text-decoration-none">
+                {{ __('Stores') }}
             </a>
 
-
-            <a href="{{ route('map') }}" class="inline-block ml-4 py-2 px-4 btn btn-secondary text-decoration-none">
-                {{ __('Map') }}
-            </a>
-
-            <a href="{{ route('qr') }}" class="inline-block ml-4 py-2 px-4 btn btn-secondary text-decoration-none">
+            <a href="{{ route('qr') }}" class="inline-block py-2 px-4 btn btn-primary text-decoration-none">
                 {{ __('QR') }}
             </a>
         </div>
