@@ -34,7 +34,7 @@
                     <p>こんな服がおすすめ!!!</p>
                     <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">        
                         <img src="{{ asset($randomPicture) }}" alt="おすすめの服" width="300">             
-                    </div>           
+                    </div>                      
                 </div>
 
             </div> <!-- Flexコンテナ終了 -->
