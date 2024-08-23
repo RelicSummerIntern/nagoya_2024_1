@@ -43,13 +43,13 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('store')->insert([
             [
-                'name' => '古着屋ミカン',
+                'name' => 'ミカン',
             ],
             [
-                'name' => '古着屋バナナ',
+                'name' => 'バナナ',
             ],
             [
-                'name' => '古着屋イチゴ',
+                'name' => 'イチゴ',
             ],
             
         ]);
