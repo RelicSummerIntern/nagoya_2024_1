@@ -6,7 +6,7 @@ use App\Models\Post;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Models\Clothes;
+use App\Models\StoreClothes;
 use App\Models\UserClothes;
 
 class PostController extends Controller
@@ -41,10 +41,10 @@ class PostController extends Controller
 
     public function chat() {
         // クエリパラメータからselectedClothesを取得する
-        $selectedClothesId = request('selectedClothes');
-        $selectedClothes = Clothes::find($selectedClothesId);
+        $storeClothesId = request('storeClothes');
+        $storeClothes = StoreClothes::find($storeClothesId);
 
-        return view('chat', compact('selectedClothes'));
+        return view('chat', compact('storeClothes'));
     }
 
     public function chat_banana() {

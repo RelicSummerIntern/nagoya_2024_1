@@ -44,7 +44,7 @@
                 {{ __('購入する') }}
             </a>
 
-            <a href="{{ route('chat', ['selectedClothes' => $selectedClothes->id]) }}" class="inline-block ml-4 py-2 px-4 btn btn-secondary text-decoration-none">
+            <a href="{{ route('chat', ['storeClothes' => $storeClothes->id]) }}" class="inline-block ml-4 py-2 px-4 btn btn-secondary text-decoration-none">
                 {{ __('Chat') }}
             </a>
 
