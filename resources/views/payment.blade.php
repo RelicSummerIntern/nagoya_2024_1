@@ -6,6 +6,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>決済画面</title>
+    <?php
+        $store = App\Models\Store::where('id', $storeClothes->store_id)->first();
+    ?>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -21,7 +24,7 @@
             margin-bottom: 1.5rem;
         }
         .header-container img {
-            max-height: 60px; /* 画像の最大高さを指定 */
+            max-height: 150px; /* 画像の最大高さを指定 */
             object-fit: contain;
         }
         .store-info {
@@ -43,12 +46,12 @@
             <div class="header-container">
                 <!-- 左上の画像 -->
                 <div>
-                    <img src="{{ asset('images/sukesuke.png') }}" alt="Selected Image">
+                    <img src="{{ asset($storeClothes->picture) }}" alt="Selected Image">
                 </div>
 
                 <!-- 右上の服屋の名前と金額 -->
                 <div class="store-info">
-                    <h2 id="store-name" class="text-xl font-semibold text-gray-800">古着屋バナナ</h2>
+                    <h2 id="store-name" class="text-xl font-semibold text-gray-800">{{$store->name}}</h2>
                     <p id="store-amount" class="text-lg font-medium text-gray-600">金額: ¥3000</p>
                 </div>
             </div>
