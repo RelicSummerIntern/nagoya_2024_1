@@ -10,7 +10,7 @@
 
             <!-- マップ画像表示 -->
             <div class="bg-white shadow-md rounded-lg overflow-hidden mb-8">
-                <img src="{{ asset('images/map.png') }}" class="w-full h-auto" alt="お店のマップ">
+                <img src="{{ asset('images/map.png') }}" class="max-w-full h-auto mx-auto" alt="お店のマップ">
             </div>
 
             <!-- 追加情報 -->
