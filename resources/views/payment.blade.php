@@ -36,7 +36,7 @@
     </style>
 </head>
 <body class="font-sans antialiased">
-    <div class="min-h-screen bg-blue-100">
+    <div class="min-h-screen bg-gray-100">
         @include('layouts.navigation')
 
         <main class="max-w-4xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
