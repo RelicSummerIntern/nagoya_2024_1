@@ -37,16 +37,13 @@
                         <img src="{{ asset($randomPicture) }}" alt="おすすめの服" width="300">             
 
                     </div>                      
-
-                    </div>
-                    <?php echo $store->name; ?>            
-
+                    <p>{{$store->name}}</p>      
                 </div>
 
             </div> <!-- Flexコンテナ終了 -->
 
             <div class="my-4">
-            <a href="{{ route('payment') }}" class="inline-block py-2 px-4 btn btn-primary text-decoration-none">
+            <a href="{{ route('payment', ['storeClothes' => $storeClothes->id]) }}" class="inline-block ml-4 py-2 px-4 btn btn-secondary text-decoration-none">
                 {{ __('購入する') }}
             </a>
 

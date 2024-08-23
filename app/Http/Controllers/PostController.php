@@ -143,9 +143,20 @@ class PostController extends Controller
         return view('background', compact('posts'));
     }
 
-    public function payment()
-    {
-        return view('payment');
+    // public function payment()
+    // {
+    //     // クエリパラメータからselectedClothesを取得する
+    //     $storeClothesId = request('storeClothes');
+    //     $storeClothes = StoreClothes::find($storeClothesId);
+    //     return view('payment', compact('storeClothes'));
+    // }
+
+    public function payment() {
+        // クエリパラメータからselectedClothesを取得する
+        $storeClothesId = request('storeClothes');
+        $storeClothes = StoreClothes::find($storeClothesId);
+
+        return view('payment', compact('storeClothes'));
     }
 
     public function point()
